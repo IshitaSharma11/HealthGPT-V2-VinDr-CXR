@@ -80,7 +80,7 @@ HealthGPT utilizes `clip-vit-large-patch14-336` as the visual encoder and employ
 |ViT|`clip-vit-large-patch14-336`|[Download](https://huggingface.co/openai/clip-vit-large-patch14-336)|
 |Base Model (HealthGPT-M3)|`Phi-3-mini-4k-instruct`|[Download](https://huggingface.co/microsoft/Phi-3-mini-4k-instruct)|
 |Base Model (HealthGPT-L14)|`Phi-4`|[Download](https://huggingface.co/microsoft/phi-4)|
-|Base Model (Qwen2.5-32B-Instruct)|`Qwen2.5-32B-Instruct `|[Download]([https://huggingface.co/Qwen/Qwen2.5-32B-Instruct)|
+|Base Model (Qwen2.5-32B-Instruct)|`Qwen2.5-32B-Instruct `|[Download](https://huggingface.co/Qwen/Qwen2.5-32B-Instruct)|
 
 For medical vision generation tasks, please follow the [official VQGAN guide](https://github.com/CompVis/taming-transformers) and download the `VQGAN OpenImages (f=8), 8192` model weights from the `"Overview of pretrained models"` section. Below is the direct link to the corresponding VQGAN pre-trained weights:
 |Model Name|Download|
