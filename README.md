@@ -28,6 +28,7 @@ Welcome to **HealthGPT!** 🚀
 **HealthGPT** is an advanced medical Large Vision-Language Model with a unified framework that integrates both medical visual comprehension and generation capabilities. In this project, a **heterogeneous low rank adaptation (H-LoRA)** and a **three-stage learning strategy** are proposed, enabling the pre-trained large language model to efficiently follow both visual comprehension and generation instructions.
 
 # 🔥 News
+- **[2025.04.05]** 🎉[HealthGPT](https://arxiv.org/abs/2502.09838) has been accepted by ICML 2025 as Spotlight presentation.
 - **[2025.03.20]** We upgraded our specialized comprehension model, [**HealthGPT-XL32**](https://huggingface.co/lintw/HealthGPT-XL32), which is based on Qwen2.5-32B-Instruct. **This enhanced model significantly outperforms HealthGPT-L14, with a score of 70.4 compared to 66.4**.
 - **[2025.03.06]** We have released the VL-Health Dataset.
 - **[2025.02.26]** We have released the UI/UX for the inference.
