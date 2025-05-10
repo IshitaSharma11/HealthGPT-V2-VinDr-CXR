@@ -14,6 +14,7 @@ class SeparatorStyle(Enum):
     MPT = auto()
     PLAIN = auto()
     LLAMA_2 = auto()
+    QWEN_2 = auto()
 
 
 @dataclasses.dataclass
@@ -52,6 +53,16 @@ class Conversation:
                     ret += role + ": " + message + self.sep
                 else:
                     ret += role + ":"
+        elif self.sep_style == SeparatorStyle.QWEN_2:  # fix: add qwen2
+            seps = [self.sep, self.sep2]
+            ret = self.system + seps[0]
+            for i, (role, message) in enumerate(messages):
+                if message:
+                    if type(message) is tuple:
+                        message, _, _ = message
+                    ret += role + message + seps[i % 2]
+                else:
+                    ret += role
         elif self.sep_style == SeparatorStyle.TWO:
             seps = [self.sep, self.sep2]
             ret = self.system + seps[0]
@@ -391,6 +402,18 @@ conv_phi4_instruct = Conversation(
     sep="<|im_end|>",
 )
 
+conv_qwen_2 = Conversation(
+    system="<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.",
+    roles=("<|im_start|>user\n", "<|im_start|>assistant\n"),
+    version="qwen_v2",
+    messages=(),
+    offset=0,
+    sep_style=SeparatorStyle.QWEN_2,
+    sep="<|im_end|>\n",
+    sep2="<|im_end|>\n",
+)
+
+
 default_conversation = conv_vicuna_v1
 conv_templates = {
     "default": conv_vicuna_v0,
@@ -411,6 +434,7 @@ conv_templates = {
     "llava_llama_2": conv_llava_llama_2,
     "phi3_instruct": conv_phi3_instruct,
     "phi4_instruct": conv_phi4_instruct,
+    "qwen_2": conv_qwen_2,
     "mpt": conv_mpt,
 }
 
