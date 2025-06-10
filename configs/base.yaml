@@ -1,23 +1,12 @@
-# base.yaml
-experiment:
-  name: base_healthgpt
-  seed: 42
-  use_hlora: false
-
-dataset:
-  image_size: 512
-  augmentations: true
-
-logging:
-  log_dir: results/logs/
-  use_wandb: false
-
-optimizer:
-  name: adamw
-  learning_rate: 3e-5
-  weight_decay: 0.01
-  scheduler: cosine
-
-checkpoint:
-  save_dir: results/checkpoints/
-  save_every: 5
+project_name: HealthGPT_V2
+device: cuda
+num_workers: 8
+batch_size: 16
+learning_rate: 1e-4
+weight_decay: 0.01
+epochs: 30
+seed: 42
+image_size: [224, 224]
+log_interval: 10
+save_checkpoint: true
+checkpoint_dir: checkpoints/
