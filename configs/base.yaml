@@ -1,0 +1,23 @@
+# base.yaml
+experiment:
+  name: base_healthgpt
+  seed: 42
+  use_hlora: false
+
+dataset:
+  image_size: 512
+  augmentations: true
+
+logging:
+  log_dir: results/logs/
+  use_wandb: false
+
+optimizer:
+  name: adamw
+  learning_rate: 3e-5
+  weight_decay: 0.01
+  scheduler: cosine
+
+checkpoint:
+  save_dir: results/checkpoints/
+  save_every: 5
