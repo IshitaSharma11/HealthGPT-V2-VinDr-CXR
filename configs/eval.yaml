@@ -1,0 +1,7 @@
+eval:
+  datasets: ["MIMIC-CXR", "VinDr-CXR"]
+  metrics: ["roc_auc", "f1", "precision", "recall"]
+  model_checkpoints: ["checkpoints/model_v1.pt", "checkpoints/model_v2_hlora.pt"]
+  batch_size: 32
+  save_predictions: true
+  output_dir: outputs/eval/
