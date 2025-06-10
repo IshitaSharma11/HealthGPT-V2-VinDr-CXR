@@ -1,0 +1,1 @@
+wget -r -N -c -np --user salmansaleem007 --ask-password https://physionet.org/files/vindr-cxr/1.0.0/
