@@ -1,0 +1,7 @@
+model:
+  architecture: vit_base_patch16_224
+  pretrained: true
+  num_classes: 14
+  use_attention: true
+  hlora_config: configs/hlora.yaml
+  dropout: 0.1
