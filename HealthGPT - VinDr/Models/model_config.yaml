@@ -1,0 +1,22 @@
+################  model_config.yaml  #############
+# backbone, LoRA & generation settings to use
+
+model:
+  model_name_or_path: "liuhaotian/llava-v1.5-7b"      
+  torch_dtype: float16                        
+  attn_implementation: eager
+  hlora_r: 64
+  hlora_alpha: 128
+  hlora_dropout: 0.0
+  hlora_nums: 4
+  vq_idx_nums: 8192
+  instruct_template: phi3_instruct
+  vit_path:  "openai/clip-vit-large-patch14-336"      # CLIP-ViT encoder
+  hlora_path: /workspace/Project/HealthGPT/llava/hlora_weights/com_hlora_weights.bin
+  fusion_layer_path: /workspace/Project/HealthGPT/llava/fusion_layer/fusion_layer_weights.bin
+  do_sample: false
+  temperature: 0.0
+  top_p: null
+  num_beams: 1
+  max_new_tokens: 128
+  task_type: comprehension

@@ -1,0 +1,24 @@
+# VinDr-CXR with training + validation splits
+
+fields:
+  image:
+    root: "data/train_image"
+    key: image_path
+
+  question:
+    key: question
+
+  bbox:
+    key: bbox
+
+  label:
+    key: answer
+
+ann_file: vindr_trainval.json
+train_split: train
+split_key: split
+
+val_files:
+  val:
+    file: vindr_trainval.json
+    split: val
