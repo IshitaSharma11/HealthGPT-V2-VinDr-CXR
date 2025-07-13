@@ -1,0 +1,12 @@
+project_name: HealthGPT_V2
+device: cuda
+num_workers: 8
+batch_size: 16
+learning_rate: 1e-4
+weight_decay: 0.01
+epochs: 30
+seed: 42
+image_size: [224, 224]
+log_interval: 10
+save_checkpoint: true
+checkpoint_dir: checkpoints/

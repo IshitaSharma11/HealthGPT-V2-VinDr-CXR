@@ -1,0 +1,17 @@
+dataset:
+  name: VinDr-CXR
+  path: /data/vindr-cxr/
+  split: train
+  annotations: vindr_annotations.csv
+
+augmentation:
+  horizontal_flip: true
+  color_jitter: true
+  normalization: imagenet
+
+model:
+  config: configs/model_v2_hlora.yaml
+
+trainer:
+  resume_from_checkpoint: false
+  mixed_precision: true

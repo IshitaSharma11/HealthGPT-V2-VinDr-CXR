@@ -1,0 +1,17 @@
+dataset:
+  name: MIMIC-CXR
+  path: /data/mimic-cxr/
+  split: train
+  annotations: mimic_annotations.csv
+
+augmentation:
+  horizontal_flip: true
+  random_crop: true
+  normalization: imagenet
+
+model:
+  config: configs/model_v1.yaml
+
+trainer:
+  resume_from_checkpoint: false
+  mixed_precision: true
